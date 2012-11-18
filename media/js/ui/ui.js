@@ -61,6 +61,21 @@ define('ui', [], function() {
         });
 
         $(window).on('mouseup', function(e) {
+            if (!dragged) return;
+            e.preventDefault();
+
+            var newX = e.clientX - oLeft;
+            var newY = e.clientY - oTop;
+
+            newX = clamp(newX, 0, width);
+            newY = clamp(newY, 0, height);
+
+            dragged.css({
+                left: newX + 'px',
+                top: newY + 'px'
+            });
+
+            dragged.trigger('moved', {top: newY, left: newX});
             dragged = false;
         });
 

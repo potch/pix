@@ -2,9 +2,8 @@ define('Panel', ['ui', 'settings'], function(ui, settings) {
 
     var layouts = settings.get('layout', {});
 
-    console.log(layouts);
-
     function Panel(opts) {
+
         var el = this.render(opts);
 
         var id = opts.id;
@@ -32,6 +31,7 @@ define('Panel', ['ui', 'settings'], function(ui, settings) {
 
         return el;
     }
+
     Panel.prototype = new ui.TemplateBackedObject('panel.html');
 
     return Panel;

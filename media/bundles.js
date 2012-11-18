@@ -15,10 +15,12 @@ bundles.js = {
         'lib/nunjucks-dev.js',
         'lib/almond.js',
         'lib/rsvp-amd.js',
+        'util/nunjucks.js',
         'util/storage.js',
         'util/settings.js',
         'ui/ui.js',
         'ui/palette.js',
+        'ui/draggables.js',
         'ui/panel.js',
         'app.js'
     ],

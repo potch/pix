@@ -1,6 +1,6 @@
 define('ui', [], function() {
 
-    var env = nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('/media/templates'),
+    var env = nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('media/templates'),
                                                       true);
 
     function TemplateBackedObject(template) {
